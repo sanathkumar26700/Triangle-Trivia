@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./style.css">
+     <link rel="stylesheet" href="/vendors/css/ionicons.min.css">
+     <title>Triangle Trivia</title>
+</head>
+
+<body>
+         <h1>Triangle Trivia</h1>
+         <div class ="contacts">
+            <ul class="list-bulletless nav-pills social-links">
+                <li><a href="https://twitter.com/sanathkumar267?s=08"><i class="ion-social-twitter"></i></a></li>
+                <li><a href="https://github.com/sanathkumar26700"><i class="ion-social-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/sanath-kumar-g-v-317206193"><i class="ion-social-linkedin"></i></a></li>
+            </ul>
+    </div>
+     <section class="information">
+          <div class="content">
+               <!-- Learn about triangles -->
+               <div >
+                   <h3>Let's acquire some knowledge about Triangles</h3>
+                   <p>A triangle is a polygon with three edges and three vertices. It is one of the basic shapes in geometry. A
+                       triangle with vertices A, B, and C is denoted <i class="fas fa-caret-up">ABC</i>.</p>
+                   <p>In Euclidean geometry, any three points, when non-collinear, determine a unique triangle.</p>
+                   <div class="txt-triangle-content">
+                       <img class="img-triangle" src="triangle.png" alt ="labelled triangle">
+                       <div class="txt-triangle-desc">
+                           <p>In this example, there are 3 non-linear points named A, B and C which are the vertices of <i
+                                   class="fas fa-caret-up">ABC</i>. Triangles have 3 edges named AB, BC and CA respectively.
+                               The naming can be interchangeable i.e. an edge AB could also be referred as edge BA. In this
+                               example, we observe that the dimensions of this triangle are:-</p>
+                           <ul>
+                               <li> AB = 3.27 units</li>
+                               <li> BC = 4.74 units</li>
+                               <li> CA = 4.48 units</li>
+                           </ul>
+                           <p>Each triangle comprises of 3 angles. They are referred as follows:-</p>
+                           <ul>
+                               <li> <svg width="22" height="22">
+                                       <polygon points="25, 0, 30, 30, 0, 30" />
+                                   </svg>ABC or<svg width="22" height="22">
+                                       <polygon points="25, 0, 30, 30, 0, 30" />
+                                   </svg>CBA or<svg width="22" height="22">
+                                       <polygon points="25, 0, 30, 30, 0, 30" />
+                                   </svg>B = 65°</li>
+                               <li> <svg width="22" height="22">
+                                       <polygon points="25, 0, 30, 30, 0, 30" />
+                                   </svg>BCA or<svg width="22" height="22">
+                                       <polygon points="25, 0, 30, 30, 0, 30" />
+                                   </svg>ACB or<svg width="22" height="22">
+                                       <polygon points="25, 0, 30, 30, 0, 30" />
+                                   </svg>C = 41.38°</li>
+                               <li> <svg width="22" height="22">
+                                       <polygon points="25, 0, 30, 30, 0, 30" />
+                                   </svg>CAB or<svg width="22" height="22">
+                                       <polygon points="25, 0, 30, 30, 0, 30" />
+                                   </svg>BAC or<svg width="22" height="22">
+                                       <polygon points="25, 0, 30, 30, 0, 30" />
+                                   </svg>A = 73.62°</li>
+                           </ul>
+       
+                       </div>
+                   </div>
+               </div>
+     </section>
+     <button class="btn-test">Test in Triangles</button>
+     <section class= "quiz-main">
+     <button class="btn-back ion-arrow-left-c"></button>
+
+          <!-- To check Triangle -->
+          <div class= "quiz-box">
+          <form id="formCheckTriangle">
+                    <h2>is it Triangle ?</h2>
+                    <input type="number" id="first" placeholder="First Angle" min="1" required />
+                    <input type="number" id="second" placeholder="Second Angle" min="1" required />
+                    <input type="number" id="third" placeholder="Third Angle" min="1" required />
+                    <button type="submit" id="formCheckTriangleResult">Check</button>
+                    <div class="triangle_result"></div>
+          </form>
+          </div>
+          <!-- To Find Out Hypotenus -->
+          <div class="hypotenuse quiz-box">
+          <form id="formFindHypotenuse">
+                    <h2>Find Hypotenuse</h2>
+                    <input type="number" class="base" required min="1" placeholder="Base" />
+                    <input type="number" class="perpendicular" required min="1" placeholder="Perpendicular" />
+                    <button type="submit" id="formFindHypotenuseResult">Hypotenuse</button>
+                    <div class="hypotenuse_result"></div>
+               </form>
+          </div>
+          <!-- To Find area of triangle -->
+          <div class="area quiz-box">
+          <form id="formFindArea">
+                    <h2>Find Area of Triangle</h2>
+                    <input type="number" class="baseArea" required min="1" placeholder="Base" />
+                    <input type="number" class="heightArea" required min="1" placeholder="Height">
+                    <button type="submit" id="formFindAreaResult">Find Area</button>
+                    <div class="area_result"></div>
+               </form>
+          </div>
+          <!-- Guess the third angle -->
+          <div class="thirdangle quiz-box">
+          <form id="guessThirdAngle">
+                    <h2>Guess the third angle </h2>
+                    <label>First Angle: <span id="firstAngle"></span></label>
+                    <label>Second Angle: <span id="secondAngle"></span></label>
+                    <button onclick="generateAngle()" class="generateangles">Generate Angles</button>
+                    <input type="number" id="thirdAngle" placeholder="Guess Third Angle" required>
+                    <button type="submit" onclick="guessAngle()" id="guessResultButton">Check</button>
+                    <div class="third_angle_result"><div>
+               </form>
+          </div>
+     </section>
+     
+     <script src="./app.js"></script>
+</body>
+</html>
