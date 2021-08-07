@@ -63,7 +63,6 @@ h1{
  }
 
 .btn-back{
-     display: none;
      position: sticky;
      top: 0;
      height: 5rem;
@@ -116,7 +115,6 @@ button{
      margin: auto;
      font-size: 2rem;
      transition: 0.1s;
-     /* border-color: #34113F; */
      font-weight: 600;
 }
 button:hover{
@@ -154,6 +152,50 @@ footer{
      }
      
  }
+ /*---------------------------------------------------------------------------------*/
+   .question{
+        width: 100%;
+   }
+   .radio input {
+     cursor: pointer;
+     display: inline-block;
+   }
+    .radio label {
+     cursor: pointer;
+     display: inline-block;
+   }
+    .output {
+     display: none;
+     height: 5rem;
+     margin: auto;
+     max-width:600px;
+     width: 100%;
+     background-color:white;
+     border: 2px solid #ffffff;
+     font-size: 2rem;
+     font-weight: 500;
+     margin-top: 4rem;
+     text-align: center;
+     padding: 1.2rem;
+     margin-bottom: 3rem;
+   }
+   .quiz-main-box{
+     padding: 3rem;   
+     margin: auto;
+     max-width:600px;
+     width: 100%;
+     text-align: center;  
+     background-color: #BEB7DF;
+     height: 25rem;
+     box-shadow: 2px 5px 3px #34113F;  
+     margin-top: 3rem;
+     margin-bottom: 3rem;
+     padding :3rem;
+     transition:0.15s;
+}
+.link{
+     text-decoration: none;
+}
 /* ----------------------------------Footer--------------------------------------------- */
 .contacts {
      bottom: 1rem;
